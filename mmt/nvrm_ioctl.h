@@ -103,6 +103,19 @@ struct nvrm_ioctl_create {
 };
 #define NVRM_IOCTL_CREATE _IOWR(NVRM_IOCTL_MAGIC, 0x2b, struct nvrm_ioctl_create)
 
+struct nvrm_ioctl_create40 {
+	uint32_t cid;
+	uint32_t parent;
+	uint32_t handle;
+	uint32_t cls;
+	uint64_t ptr;
+	uint32_t status;
+	uint32_t _pad1;
+	uint32_t _pad2;
+	uint32_t _pad3;
+};
+#define NVRM_IOCTL_CREATE40 _IOWR(NVRM_IOCTL_MAGIC, 0x2b, struct nvrm_ioctl_create40)
+
 struct nvrm_ioctl_create_drv_obj {
 	uint32_t cid;
 	uint32_t parent;
